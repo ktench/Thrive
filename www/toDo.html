@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" <!-- jQueryMobileCSS - original without styling -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 
     <!-- nativeDroid core CSS -->
@@ -27,6 +27,17 @@
 
 
 <body onload="loadToDoList()">
+
+    <div id='map-canvas'></div>
+
+    <div data-role="page" data-theme='b'>
+
+
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="home.html" data-ajax="false"><i class="fa fa-heart-o"></i></a>
+            <h1>Thrive</h1>
+        </div>
+
     <input type="button" value="Add To-Do" onclick="createNewToDo()" />
     <input type="button" value="Remove Completed Tasks" onclick="removeCompletedTasks()" />
     <br/>

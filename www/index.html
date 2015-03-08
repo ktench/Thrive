@@ -3,11 +3,12 @@
     <head>
         <title>Thrive</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		
-		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
 
-		<!-- jQueryMobileCSS - original without styling -->
+		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 
 		<!-- nativeDroid core CSS -->
@@ -22,60 +23,64 @@
 		<!-- jQuery / jQueryMobile Scripts -->
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-        
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-         <script>
-            function myController($scope){
-                var aPhotos = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img6.jpg","img/7.jpg","img/8.jpg","img/9.jpg","img/10.jpg","img/11.jpg","img/12.jpg","img/13.jpg","img/14.jpg","img/15.jpg","img/16.jpg","img/17.jpg","img/18.jpg","img/19.jpg"];;
-                $scope.photo=aPhotos[Math.floor(Math.random() * aPhotos.length)];
-                
-
-            }
-            
-        </script>
 
 
     </head>
     <body>
-        
+
     <div data-role="page" data-theme='b'>
 
+        <div data-role="content">
+			<div data-nativedroid-plugin="splashscreen" data-nativedroid-splashscreen-time="5" data-nativedroid-splashscreen-animation="fadeOut" data-nativedroid-background=#6DCAEC>
+				<div class='splashScreenExample'>
+                    <h1><i class="fa fa-heart-o"></i> Thrive</h1>
+					<h2>Welcome to Thrive, the app that helps you make each day better.</h2>
+					<h3>Organize your tasks and get some daily inspiration to live a healthier, happier life!</h3>
+					<div class='splashScreenDroid'></div>
+				</div>
+			</div>
 
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-            <a href="index.html" data-ajax="false"><i class="fa fa-heartbeat"></i></a>
-            <h1>Thrive</h1>
-        </div>
-        
-        <div data-role="content">  
-            <br/>
-            <br/>
-        	<h3>“No matter what your history has been, your destiny is what you create today. What are you going to create?”</h3>
-            <h4 style="text-align:center;")>Steve Maraboli, <i>Life, the Truth, and Being Free</i></h4>
-            <br/>
-            <br/>
-			<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
-	            <li data-role="list-divider"></li>
-	            <li >
-					<a href="toDo.html" data-ajax="false"><i class='fa fa-check-square'></i>To Do</a>
-	            </li>
-	            <li >
-                    <a href="quotes.html" data-ajax="false"><i class='fa fa-align-center'></i> Quote of the Day</a>
-	            </li>
-	            <li>
-					<a href="photos.html" data-ajax="false"><i class='fa fa-table'></i>Photos</a>
-	            </li>
-	            <li>
-					<a href="health.html" data-ajax="false"><i class='fa fa-tasks'></i>Health</a>
-	            </li>
-	            <li>
-				
-	        </ul>
+			<div data-nativedroid-plugin='lockscreen' data-nativedroid-background="http://farm8.staticflickr.com/7117/7659864532_e3d6b1432c_h.jpg" data-nativedroid-lockscreen-animation="fadeOut"  data-nativedroid-lockscreen-delay="25">
+				<div class='inset'>
+					<h3>Locked</h3>
+					<p>Look's like you've been inactive!</p>
+					<div class='unlock'><i class='icon-unlock'></i> Unlock me.</div>
+				</div>
+			</div>
 
-	        
-	        
+			<div data-nativedroid-plugin="homescreen" data-nativedroid-background="http://farm9.staticflickr.com/8457/8064313210_507341f269_z.jpg">
+				<div data-nativedroid-role='screenslide'>
+
+					<div data-nativedroid-role='widget'
+						 data-nativedroid-widget-type="clock"
+						 data-nativedroid-widget-clock-lang="en"
+						 data-nativedroid-widget-clock-format="short"
+						 data-nativedroid-widget-width='2'
+						 data-nativedroid-widget-height='1'
+						 data-nativedroid-widget-offset-top='0'
+						 data-nativedroid-widget-offset-left='1'></div>
+
+					<div data-nativedroid-role='widget'
+						 data-nativedroid-widget-type='icon'
+						 data-nativedroid-widget-icon-type='text'
+						 data-nativedroid-widget-icon-class='icon-home'
+						 data-nativedroid-widget-icon-title='Home'
+						 data-nativedroid-widget-icon-link='index.html'
+						 data-nativedroid-widget-width='5'
+						 data-nativedroid-widget-height='5'
+						 data-nativedroid-widget-offset-top='4'
+						 data-nativedroid-widget-offset-left='2'>
+					</div>
+
+
+
+
+			</div>
+
         </div>
 
     </div>
 
+    <script src="js/nativedroid.script.js"></script>
     </body>
 </html>
