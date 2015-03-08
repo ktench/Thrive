@@ -57,7 +57,7 @@
 	<!-- <gap:plugin name="com.phonegap.plugins.barcodescanner" /> -->
 
 	<!-- Define app icon for each platform. -->
-	<icon src='http://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Flash_of_Happiness.jpg/256px-Flash_of_Happiness.jpg' width="57" height="57"/>
+	<icon src='img/icon.png'/>
 
 
 	<!-- Define app splash screen for each platform. -->
