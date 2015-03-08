@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Healthy Tips</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+    <!-- jQueryMobileCSS - original without styling -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+
+    <!-- nativeDroid core CSS -->
+    <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+
+    <!-- nativeDroid: Light/Dark -->
+    <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css" id='jQMnDTheme' />
+
+    <!-- nativeDroid: Color Schemes -->
+    <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.blue.css" id='jQMnDColor' />
+
+    <!-- jQuery / jQueryMobile Scripts -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+    <!-- Extras for: Cards.html -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script>
+        function myController($scope) {
+            var aTips = ['If you are angry or upset, do not binge eat. It may make the underlying problem worse. Your physical and mental health are very closely linked. Changes in one will affect the other!', 'Don\'t like the plain taste of water? Add lemons, limes, raspberries, or other fruit to add some flavour and drink up!','Get enough sleep. Getting that beauty rest is a key part of living a healthy lifestyle. If can benefit your heart, weight, mind, and so much more!','Try to exercise every day, even if it\'s something as taking the stairs instead of the elevator, or parking a little further away from the store. Everything counts!','Trying to lose weight? Try and be more aware of everything you are eating. Try a calorie counter, like MyFitnessPal, to track your calories. You\'ll be more conscious of how much you\'re actually eating!','Eat more fruits and veggies, and try to pick bright coloured foods. These bright foods are usually high in anti-oxidants, which remove free radicals in our body that damage our cells.', 'Cut down on processed food. Most nutritional value is lost in these foods, and the preservatives that are added are bad for your health.','Breathe. Breathe deeply. Take a break and a deep breath; oxygen is a vital source of life!','Try to cut out soda, and caffeine. Caffeine is a diuretic, so these drinks don\'t count towards your daily water intake. They\'re actually counterproductive!'];
+            $scope.tips = aTips[Math.floor(Math.random() * aTips.length)];
+                        $scope.changeQuote = function(){
+                $scope.tips = aTips[Math.floor(Math.random() * aTips.length)];
+            }
+            
+            $scope.calculate = function(){
+                
+                    var weight = document.getElementById('weight').value;
+                    var nOzWater = Math.floor(parseFloat(weight) / 2);
+                
+                    
+                   var cupsWater = Math.ceil(nOzWater * 0.125);
+            
+                    
+                
+                    $scope.waterToDrink = "You should be drinking at least " + nOzWater + " oz (" + cupsWater + " cups) of water per day."
+                }
+
+        }
+    </script>
+
+
+
+
+
+</head>
+
+<body data-ng-app="">
+
+    <div id='map-canvas'></div>
+
+    <div data-role="page" data-theme='b'>
+
+
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="index.html" data-ajax="false"><i class="fa fa-heartbeat"></i></a>
+            <h1>Thrive</h1>
+        </div>
+        
+        <div data-role="content" ng-controller="myController">
+            <h1 style="text-align:center;">Healthy Tips</h1>
+
+
+                <ul data-nativedroid-plugin='cards'>
+
+
+                    <li data-cards-type='text'>
+                        <h1>How much water are you drinking?</h1>
+                        <p>You're probably not getting enough water every day. Did you know that at the <b>minimum</b>, you're supposed to drink half your body weight in ounces of water each day? Many dieticians actually recommoend that you drink at least 9 cups a day. That means if you're 130 pounds, you should be drinking at least 65 ounces of water. Thats approximately 8 and a half cups of water a day, at the minimum. I know, math is hard. That's why this handy section will tell you how much water you should drink. Just enter your weight in pounds below, and we'll figure out the rest for you!</p>
+                        <input type="text" id="weight" placeholder="Weight in pounds">
+
+                        <button ng-click="calculate()">Calculate</button>
+                        <h3>{{waterToDrink}}</h3>
+
+
+
+                <li data-cards-type='text'>
+                    <h1><b>Tip of the Day</b></h1>
+                    <h3>{{tips}}</h3>
+                </li>
+
+                
+                <button ng-click= "changeQuote()">New Tip</button>
+
+
+
+            </ul>
+
+
+        </div>
+
+    </div>
+
+    <script src="js/nativedroid.script.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Thrive</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
+		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+
+		<!-- jQueryMobileCSS - original without styling -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+
+		<!-- nativeDroid core CSS -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+
+		<!-- nativeDroid: Light/Dark -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+
+		<!-- nativeDroid: Color Schemes -->
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.blue.css" id='jQMnDColor' />
+
+		<!-- jQuery / jQueryMobile Scripts -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+         <script>
+            function myController($scope){
+                var aPhotos = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img6.jpg","img/7.jpg","img/8.jpg","img/9.jpg","img/10.jpg","img/11.jpg","img/12.jpg","img/13.jpg","img/14.jpg","img/15.jpg","img/16.jpg","img/17.jpg","img/18.jpg","img/19.jpg"];;
+                $scope.photo=aPhotos[Math.floor(Math.random() * aPhotos.length)];
+                
+
+            }
+            
+        </script>
+
+
+    </head>
+    <body>
+        
+    <div data-role="page" data-theme='b'>
+
+
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="index.html" data-ajax="false"><i class="fa fa-heartbeat"></i></a>
+            <h1>Thrive</h1>
+        </div>
+        
+        <div data-role="content">  
+            <br/>
+            <br/>
+        	<h3>“No matter what your history has been, your destiny is what you create today. What are you going to create?”</h3>
+            <h4 style="text-align:center;")>Steve Maraboli, <i>Life, the Truth, and Being Free</i></h4>
+            <br/>
+            <br/>
+			<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">
+	            <li data-role="list-divider"></li>
+	            <li >
+					<a href="toDo.html" data-ajax="false"><i class='fa fa-check-square'></i>To Do</a>
+	            </li>
+	            <li >
+                    <a href="quotes.html" data-ajax="false"><i class='fa fa-align-center'></i> Quote of the Day</a>
+	            </li>
+	            <li>
+					<a href="photos.html" data-ajax="false"><i class='fa fa-table'></i>Photos</a>
+	            </li>
+	            <li>
+					<a href="health.html" data-ajax="false"><i class='fa fa-tasks'></i>Health</a>
+	            </li>
+	            <li>
+				
+	        </ul>
+
+	        
+	        
+        </div>
+
+    </div>
+
+    </body>
+</html>
