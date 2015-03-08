@@ -6,7 +6,7 @@
 
 		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
         <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
 
 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
@@ -31,25 +31,21 @@
     <div data-role="page" data-theme='b'>
 
         <div data-role="content">
-			<div data-nativedroid-plugin="splashscreen" data-nativedroid-splashscreen-time="5" data-nativedroid-splashscreen-animation="fadeOut" data-nativedroid-background=#6DCAEC>
+
 				<div class='splashScreenExample'>
+                    <div data-nativedroid-plugin="splashscreen" data-nativedroid-splashscreen-time="250" data-nativedroid-splashscreen-animation="fadeOut" data-nativedroid-background="#000000">
                     <h1><i class="fa fa-heart-o"></i> Thrive</h1>
-					<h2>Welcome to Thrive, the app that helps you make each day better.</h2>
+					<h3>Welcome to Thrive, the app that helps you make each day better.</h3>
 					<h3>Organize your tasks and get some daily inspiration to live a healthier, happier life!</h3>
-					<div class='splashScreenDroid'></div>
+                    <h5>Tap below to begin!</h5>
+					<a href="home.html"><div class='splashScreenDroid'></div></a>
 				</div>
 			</div>
 
-			<div data-nativedroid-plugin='lockscreen' data-nativedroid-background="http://farm8.staticflickr.com/7117/7659864532_e3d6b1432c_h.jpg" data-nativedroid-lockscreen-animation="fadeOut"  data-nativedroid-lockscreen-delay="25">
-				<div class='inset'>
-					<h3>Locked</h3>
-					<p>Look's like you've been inactive!</p>
-					<div class='unlock'><i class='icon-unlock'></i> Unlock me.</div>
-				</div>
-			</div>
 
-			<div data-nativedroid-plugin="homescreen" data-nativedroid-background="http://farm9.staticflickr.com/8457/8064313210_507341f269_z.jpg">
+	<!--		<div data-nativedroid-plugin="homescreen" data-nativedroid-background="http://farm9.staticflickr.com/8457/8064313210_507341f269_z.jpg">
 				<div data-nativedroid-role='screenslide'>
+
 
 					<div data-nativedroid-role='widget'
 						 data-nativedroid-widget-type="clock"
@@ -64,8 +60,8 @@
 						 data-nativedroid-widget-type='icon'
 						 data-nativedroid-widget-icon-type='text'
 						 data-nativedroid-widget-icon-class='icon-home'
-						 data-nativedroid-widget-icon-title='Home'
-						 data-nativedroid-widget-icon-link='index.html'
+						 data-nativedroid-widget-icon-title='Begin.'
+						 data-nativedroid-widget-icon-link='home.html'
 						 data-nativedroid-widget-width='5'
 						 data-nativedroid-widget-height='5'
 						 data-nativedroid-widget-offset-top='4'
@@ -77,10 +73,10 @@
 
 			</div>
 
-        </div>
+        </div>-->
 
     </div>
-
+        </div>
     <script src="js/nativedroid.script.js"></script>
     </body>
 </html>
